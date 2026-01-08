@@ -125,19 +125,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
     position: relative;
 }
 
 h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 2rem;
     position: relative;
 }
 
 h3 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     margin-bottom: 1rem;
     font-weight: 300;
 }
@@ -233,11 +233,9 @@ header {
 }
 
 .logo img {
-    height: 70px;
+    height: 50px;
     width: auto;
     transition: opacity 0.3s ease;
-    min-height: 50px;
-    min-width: 100px;
 }
 
 .logo img:hover {
@@ -476,12 +474,12 @@ header {
 
 .hero-content h1 {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 5.5rem;
+    font-size: 3.5rem;
     color: #f3f1ee;
     text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.7);
     margin-bottom: 1.5rem;
     font-weight: 300;
-    letter-spacing: 8px;
+    letter-spacing: 6px;
     line-height: 1.2;
     opacity: 0;
     animation: fadeIn 1.2s ease-out 0.3s forwards;
@@ -489,10 +487,10 @@ header {
 
 .hero-content p {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 1.3rem;
+    font-size: 1rem;
     color: #f3f1ee;
     text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
-    letter-spacing: 4px;
+    letter-spacing: 3px;
     text-transform: uppercase;
     font-weight: 300;
     opacity: 0;
@@ -746,10 +744,10 @@ header {
 
 .featured-artists h2 {
     position: relative;
-    font-size: 4.5rem;
+    font-size: 2.5rem;
     margin-bottom: 100px;
     font-weight: 100;
-    letter-spacing: 10px;
+    letter-spacing: 6px;
     padding-left: 120px;
     text-transform: uppercase;
 }
@@ -1207,7 +1205,7 @@ footer::after {
 }
 
 .footer-logo img {
-    height: 70px;
+    height: 50px;
     opacity: 0.9;
     filter: brightness(0) invert(1);
     transition: opacity 0.3s ease;
@@ -1486,10 +1484,10 @@ footer::after {
 }
 
 .page-header h1 {
-    font-size: 6rem;
+    font-size: 3.5rem;
     margin-bottom: 40px;
     font-weight: 100;
-    letter-spacing: 12px;
+    letter-spacing: 8px;
     text-transform: uppercase;
     position: relative;
     display: inline-block;
@@ -1506,10 +1504,10 @@ footer::after {
 }
 
 .page-header p {
-    font-size: 1.2rem;
+    font-size: 0.9rem;
     opacity: 0.5;
     font-weight: 300;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
     text-transform: uppercase;
     max-width: 600px;
 }
@@ -3202,9 +3200,7 @@ footer::after {
     }
     
     .logo img {
-        height: 60px;
-        min-height: 50px;
-        min-width: 100px;
+        height: 45px;
         display: block;
         visibility: visible;
         opacity: 1;
@@ -3269,12 +3265,12 @@ footer::after {
     }
     
     .hero-content h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
         letter-spacing: 3px;
     }
     
     .hero-content p {
-        font-size: 0.85rem;
+        font-size: 0.75rem;
         letter-spacing: 1.5px;
     }
     
@@ -3423,7 +3419,7 @@ footer::after {
     }
     
     .featured-artists h2 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         padding-left: 0;
         text-align: center;
         margin-bottom: 60px;
@@ -3485,19 +3481,19 @@ footer::after {
     }
     
     h1 {
-        font-size: 1.8rem;
-    }
-    
-    h2 {
         font-size: 1.5rem;
     }
     
+    h2 {
+        font-size: 1.3rem;
+    }
+    
     h3 {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
     
     .page-header h1 {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
     
     .page-header {
@@ -3506,7 +3502,7 @@ footer::after {
     }
     
     .page-header h1 {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
         letter-spacing: 3px;
     }
     
@@ -3517,7 +3513,7 @@ footer::after {
     }
     
     .page-header p {
-        font-size: 0.75rem;
+        font-size: 0.7rem;
         letter-spacing: 1px;
     }
     
