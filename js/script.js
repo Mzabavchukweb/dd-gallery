@@ -98,11 +98,35 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Hero Slider
+// Hero Slider - Optimized with preloading
 const heroSlides = document.querySelectorAll('.hero-slide');
 const dots = document.querySelectorAll('.dot');
 let currentSlide = 0;
 let slideInterval;
+
+// Preload next slide image
+function preloadNextSlide() {
+    const nextSlideIndex = (currentSlide + 1) % heroSlides.length;
+    const nextSlide = heroSlides[nextSlideIndex];
+    if (nextSlide) {
+        const nextImg = nextSlide.querySelector('img');
+        if (nextImg && nextImg.src && !nextImg.complete && nextImg.src !== '') {
+            // Check if link already exists
+            const existingLink = document.querySelector(`link[href="${nextImg.src}"]`);
+            if (!existingLink) {
+                const link = document.createElement('link');
+                link.rel = 'preload';
+                link.as = 'image';
+                link.href = nextImg.src;
+                link.onerror = function() {
+                    // Silently fail if preload fails
+                    this.remove();
+                };
+                document.head.appendChild(link);
+            }
+        }
+    }
+}
 
 function showSlide(n) {
     // Usuń active ze wszystkich slajdów
@@ -125,6 +149,8 @@ function showSlide(n) {
     
     if (heroSlides[currentSlide]) {
         heroSlides[currentSlide].classList.add('active');
+        // Preload next slide
+        preloadNextSlide();
     }
     if (dots[currentSlide]) {
         dots[currentSlide].classList.add('active');
@@ -143,28 +169,10 @@ function stopSlider() {
     clearInterval(slideInterval);
 }
 
-// Preload następnych obrazów w sliderze dla lepszej wydajności
-function preloadNextImages() {
-    heroSlides.forEach((slide, index) => {
-        const img = slide.querySelector('img');
-        if (img && index > 0) {
-            // Preload obrazów, które będą potrzebne
-            const link = document.createElement('link');
-            link.rel = 'preload';
-            link.as = 'image';
-            link.href = img.src;
-            document.head.appendChild(link);
-        }
-    });
-}
-
 // Inicjalizacja slidera
 if (heroSlides.length > 0) {
     showSlide(0);
     startSlider();
-    
-    // Preloaduj następne obrazy
-    preloadNextImages();
     
     // Kliknięcie w kropki
     dots.forEach((dot, index) => {
@@ -367,10 +375,16 @@ function animateNumber(element) {
 // Parallax effect dla hero (starszy kod - zostaje bez zmian dla kompatybilności)
 
 // Lazy loading dla obrazków (dla lepszej wydajności)
+// NOTE: This code is deprecated - modern browsers handle loading="lazy" natively
+// Keeping for compatibility but it shouldn't interfere with native lazy loading
 if ('loading' in HTMLImageElement.prototype) {
-    const images = document.querySelectorAll('img[loading="lazy"]');
+    // Native lazy loading is supported, no need to manually set src
+    // Only process images with data-src attribute (for manual lazy loading)
+    const images = document.querySelectorAll('img[data-src]');
     images.forEach(img => {
-        img.src = img.dataset.src;
+        if (img.dataset.src && img.dataset.src !== '') {
+            img.src = img.dataset.src;
+        }
     });
 } else {
     // Fallback dla starszych przeglądarek
@@ -453,6 +467,60 @@ const imageObserver = new IntersectionObserver((entries) => {
 // Observe wszystkie obrazy
 document.querySelectorAll('img').forEach(img => {
     img.style.opacity = '1';
+});
+
+// Scroll to Top Button
+const scrollToTopBtn = document.querySelector('.scroll-to-top');
+
+if (scrollToTopBtn) {
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            scrollToTopBtn.classList.add('visible');
+        } else {
+            scrollToTopBtn.classList.remove('visible');
+        }
+    });
+
+    scrollToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
+
+// Image Error Handling
+document.querySelectorAll('img').forEach(img => {
+    img.addEventListener('error', function() {
+        this.classList.add('error');
+        if (!this.alt || this.alt === '') {
+            this.alt = 'Obraz nie mógł zostać załadowany';
+        }
+        // Don't log to console to avoid noise
+    });
+    
+    // Check if image src is valid
+    if (img.src && img.src !== '' && !img.complete) {
+        img.addEventListener('load', function() {
+            this.classList.remove('error');
+        });
+    }
+});
+
+// Form Loading State
+const forms = document.querySelectorAll('form');
+forms.forEach(form => {
+    form.addEventListener('submit', function(e) {
+        // Only add loading if form validation passes
+        if (this.checkValidity()) {
+            this.classList.add('form-loading');
+            const submitBtn = this.querySelector('button[type="submit"]');
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Wysyłanie...';
+            }
+        }
+    });
 });
 
 console.log('DD Art Gallery - Website loaded successfully');

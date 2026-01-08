@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DD Art Gallery - Galeria Sztuki Współczesnej</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="preload" as="image" href="IMG_5563.jpeg" fetchpriority="high">
 </head>
 <body>
+    <!-- Skip to Content Link -->
+    <a href="#main-content" class="skip-to-content">Przejdź do treści</a>
+    
     <!-- Header z nawigacją -->
     <header>
         <nav class="navbar">
@@ -54,32 +56,34 @@
                     <li><a href="index.html" class="active">HOME</a></li>
                     <li><a href="wydarzenia.html">WYDARZENIA</a></li>
                     <li><a href="artysci.html">ARTYŚCI</a></li>
-                    <li><a href="katalog.html">KATALOG</a></li>
+                    <li><a href="katalog.html">KATALOGI</a></li>
                     <li><a href="kontakt.html">KONTAKT</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
+    <!-- Main Content -->
+    <main id="main-content">
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-slider">
             <div class="hero-slide active">
-                <img src="IMG_5563.jpeg" alt="Wystawa" loading="eager" fetchpriority="high" decoding="async">
+                <img src="IMG_5563.jpeg" alt="Wystawa" fetchpriority="high">
                 <div class="hero-content">
                     <h1>Galeria Sztuki Współczesnej</h1>
                     <p>DD Art Gallery</p>
                 </div>
             </div>
             <div class="hero-slide">
-                <img src="IMG_5566.jpeg" alt="Dzieła sztuki" loading="lazy" decoding="async">
+                <img src="IMG_5566.jpeg" alt="Dzieła sztuki" loading="lazy">
                 <div class="hero-content">
                     <h1>Sztuka w Sercu Warszawy</h1>
                     <p>Odkryj współczesną twórczość</p>
                 </div>
             </div>
             <div class="hero-slide">
-                <img src="IMG_5565.jpeg" alt="Rzeźba" loading="lazy" decoding="async">
+                <img src="IMG_5565.jpeg" alt="Rzeźba" loading="lazy">
                 <div class="hero-content">
                     <h1>Wyjątkowe Dzieła</h1>
                     <p>Przestrzeń dla sztuki</p>
@@ -220,7 +224,7 @@
                         <ul>
                             <li><a href="wydarzenia.html">Wydarzenia</a></li>
                             <li><a href="artysci.html">Artyści</a></li>
-                            <li><a href="katalog.html">Katalog</a></li>
+                            <li><a href="katalog.html">Katalogi</a></li>
                         </ul>
                     </div>
                     
@@ -263,6 +267,13 @@
             </div>
         </div>
     </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" aria-label="Przewiń do góry" title="Przewiń do góry">
+        ↑
+    </button>
+
+    </main>
 
     <script src="js/script.js"></script>
 </body>
