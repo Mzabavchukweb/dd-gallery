@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DD Art Gallery - Galeria Sztuki Współczesnej</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preload" as="image" href="IMG_5563.jpeg" fetchpriority="high">
 </head>
 <body>
     <!-- Header z nawigacją -->
@@ -17,10 +18,6 @@
                         <button class="lang-btn active" data-lang="en">EN</button>
                         <span class="lang-separator">|</span>
                         <button class="lang-btn" data-lang="pl">PL</button>
-                        <span class="lang-separator">|</span>
-                        <button class="lang-btn" data-lang="de">DE</button>
-                        <span class="lang-separator">|</span>
-                        <button class="lang-btn" data-lang="ch">CH</button>
                     </div>
                     <div class="social-icons">
                         <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
@@ -68,21 +65,21 @@
     <section class="hero">
         <div class="hero-slider">
             <div class="hero-slide active">
-                <img src="IMG_5563.jpeg" alt="Wystawa">
+                <img src="IMG_5563.jpeg" alt="Wystawa" loading="eager" fetchpriority="high" decoding="async">
                 <div class="hero-content">
                     <h1>Galeria Sztuki Współczesnej</h1>
                     <p>DD Art Gallery</p>
                 </div>
             </div>
             <div class="hero-slide">
-                <img src="IMG_5566.jpeg" alt="Dzieła sztuki">
+                <img src="IMG_5566.jpeg" alt="Dzieła sztuki" loading="lazy" decoding="async">
                 <div class="hero-content">
                     <h1>Sztuka w Sercu Warszawy</h1>
                     <p>Odkryj współczesną twórczość</p>
                 </div>
             </div>
             <div class="hero-slide">
-                <img src="IMG_5565.jpeg" alt="Rzeźba">
+                <img src="IMG_5565.jpeg" alt="Rzeźba" loading="lazy" decoding="async">
                 <div class="hero-content">
                     <h1>Wyjątkowe Dzieła</h1>
                     <p>Przestrzeń dla sztuki</p>

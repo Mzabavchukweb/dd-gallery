@@ -143,10 +143,28 @@ function stopSlider() {
     clearInterval(slideInterval);
 }
 
+// Preload następnych obrazów w sliderze dla lepszej wydajności
+function preloadNextImages() {
+    heroSlides.forEach((slide, index) => {
+        const img = slide.querySelector('img');
+        if (img && index > 0) {
+            // Preload obrazów, które będą potrzebne
+            const link = document.createElement('link');
+            link.rel = 'preload';
+            link.as = 'image';
+            link.href = img.src;
+            document.head.appendChild(link);
+        }
+    });
+}
+
 // Inicjalizacja slidera
 if (heroSlides.length > 0) {
     showSlide(0);
     startSlider();
+    
+    // Preloaduj następne obrazy
+    preloadNextImages();
     
     // Kliknięcie w kropki
     dots.forEach((dot, index) => {
