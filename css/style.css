@@ -471,15 +471,16 @@ header {
 
 .hero-content h1 {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     color: #f3f1ee;
     text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.7);
     margin-bottom: 1.5rem;
     font-weight: 300;
-    letter-spacing: 6px;
+    letter-spacing: 4px;
     line-height: 1.2;
     opacity: 0;
     animation: fadeIn 1.2s ease-out 0.3s forwards;
+    white-space: nowrap;
 }
 
 .hero-content p {
@@ -3179,8 +3180,9 @@ img.error {
 
 @media (max-width: 1024px) {
     .hero-content h1 {
-        font-size: 2.5rem;
-        letter-spacing: 4px;
+        font-size: 2rem;
+        letter-spacing: 3px;
+        white-space: nowrap;
     }
     
     .hero-content p {
@@ -3341,8 +3343,9 @@ img.error {
     }
     
     .hero-content h1 {
-        font-size: 2rem;
-        letter-spacing: 3px;
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+        white-space: nowrap;
     }
     
     .hero-content p {
@@ -3621,7 +3624,7 @@ img.error {
 
 /* Artist Detail Page - Single Card Product */
 .artist-detail {
-    padding: 120px 0 140px;
+    padding: 120px 0 60px;
     position: relative;
     overflow: hidden;
 }
@@ -3641,7 +3644,7 @@ img.error {
     display: grid;
     grid-template-columns: 1.1fr 0.9fr;
     gap: 100px;
-    margin-bottom: 100px;
+    margin-bottom: 40px;
     position: relative;
 }
 
@@ -3661,6 +3664,9 @@ img.error {
     top: 140px;
     height: fit-content;
     transition: all 0.5s ease;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .artist-main-image::before {
@@ -3677,10 +3683,12 @@ img.error {
 .artist-main-image img {
     width: 100%;
     height: auto;
-    max-height: 750px;
-    object-fit: cover;
+    max-height: 600px;
+    object-fit: contain;
     filter: grayscale(0.2);
     transition: filter 0.6s ease, transform 0.6s ease;
+    display: block;
+    margin-bottom: 40px;
 }
 
 .artist-main-image:hover img {
@@ -3774,7 +3782,8 @@ img.error {
 .artist-details-list {
     background: linear-gradient(135deg, rgba(232, 230, 225, 0.5) 0%, rgba(232, 230, 225, 0.8) 100%);
     padding: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+    margin-top: 0;
     position: relative;
     backdrop-filter: blur(10px);
     border-left: 3px solid rgba(33, 33, 33, 0.1);
@@ -3832,6 +3841,7 @@ img.error {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
+    margin-top: 0;
 }
 
 .artist-works-section {
@@ -3869,7 +3879,7 @@ img.error {
 .work-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     transition: transform 0.5s ease;
 }
 
