@@ -1,7 +1,7 @@
 // Scroll Reveal Animations
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const revealElements = document.querySelectorAll('.scroll-reveal, .scroll-reveal-left, .scroll-reveal-right');
-    
+
     const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry, index) => {
             if (entry.isIntersecting) {
@@ -14,25 +14,25 @@ document.addEventListener('DOMContentLoaded', function() {
         threshold: 0.15,
         rootMargin: '0px 0px -50px 0px'
     });
-    
+
     revealElements.forEach(el => {
         revealObserver.observe(el);
     });
 });
 
 // Magnetic Buttons Effect
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const buttons = document.querySelectorAll('.btn, .btn-small');
-    
+
     buttons.forEach(button => {
         button.addEventListener('mousemove', (e) => {
             const rect = button.getBoundingClientRect();
             const x = e.clientX - rect.left - rect.width / 2;
             const y = e.clientY - rect.top - rect.height / 2;
-            
+
             button.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px) translateY(-3px)`;
         });
-        
+
         button.addEventListener('mouseleave', () => {
             button.style.transform = '';
         });
@@ -40,20 +40,20 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Hamburger Menu Toggle
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
-    
+
     // Utwórz overlay
     const overlay = document.createElement('div');
     overlay.className = 'menu-overlay';
     document.body.appendChild(overlay);
-    
+
     function toggleMenu() {
         navMenu.classList.toggle('active');
         overlay.classList.toggle('active');
         document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
-        
+
         // Animacja hamburgera
         const spans = hamburger.querySelectorAll('span');
         if (navMenu.classList.contains('active')) {
@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
             spans[2].style.transform = 'none';
         }
     }
-    
+
     function closeMenu() {
         navMenu.classList.remove('active');
         overlay.classList.remove('active');
@@ -76,19 +76,19 @@ document.addEventListener('DOMContentLoaded', function() {
         spans[1].style.opacity = '1';
         spans[2].style.transform = 'none';
     }
-    
+
     if (hamburger) {
         hamburger.addEventListener('click', toggleMenu);
-        
+
         // Zamknij menu po kliknięciu w overlay
         overlay.addEventListener('click', closeMenu);
-        
+
         // Zamknij menu po kliknięciu w link
         const navLinks = document.querySelectorAll('.nav-menu a');
         navLinks.forEach(link => {
             link.addEventListener('click', closeMenu);
         });
-        
+
         // Zamknij menu klawiszem ESC
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && navMenu.classList.contains('active')) {
@@ -118,7 +118,7 @@ function preloadNextSlide() {
                 link.rel = 'preload';
                 link.as = 'image';
                 link.href = nextImg.src;
-                link.onerror = function() {
+                link.onerror = function () {
                     // Silently fail if preload fails
                     this.remove();
                 };
@@ -133,11 +133,11 @@ function showSlide(n) {
     heroSlides.forEach(slide => {
         slide.classList.remove('active');
     });
-    
+
     dots.forEach(dot => {
         dot.classList.remove('active');
     });
-    
+
     // Dodaj active do bieżącego slajdu
     currentSlide = n;
     if (currentSlide >= heroSlides.length) {
@@ -146,7 +146,7 @@ function showSlide(n) {
     if (currentSlide < 0) {
         currentSlide = heroSlides.length - 1;
     }
-    
+
     if (heroSlides[currentSlide]) {
         heroSlides[currentSlide].classList.add('active');
         // Preload next slide
@@ -173,7 +173,7 @@ function stopSlider() {
 if (heroSlides.length > 0) {
     showSlide(0);
     startSlider();
-    
+
     // Kliknięcie w kropki
     dots.forEach((dot, index) => {
         dot.addEventListener('click', () => {
@@ -182,7 +182,7 @@ if (heroSlides.length > 0) {
             startSlider();
         });
     });
-    
+
     // Zatrzymaj slider po najechaniu myszką
     const heroSection = document.querySelector('.hero');
     if (heroSection) {
@@ -202,9 +202,9 @@ if (filterButtons.length > 0) {
             filterButtons.forEach(btn => btn.classList.remove('active'));
             // Dodaj active do klikniętego przycisku
             button.classList.add('active');
-            
+
             const filterValue = button.getAttribute('data-filter');
-            
+
             catalogItems.forEach(item => {
                 if (filterValue === 'all') {
                     item.classList.remove('hidden');
@@ -238,33 +238,33 @@ if (filterButtons.length > 0) {
 const contactForm = document.getElementById('contactForm');
 
 if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
+    contactForm.addEventListener('submit', function (e) {
         e.preventDefault();
-        
+
         // Pobierz wartości z formularza
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
         const message = document.getElementById('message').value;
         const consent = document.getElementById('consent').checked;
-        
+
         // Podstawowa walidacja
         if (!name || !email || !message) {
             alert('Proszę wypełnić wszystkie wymagane pola.');
             return;
         }
-        
+
         if (!consent) {
             alert('Proszę wyrazić zgodę na przetwarzanie danych osobowych.');
             return;
         }
-        
+
         // Walidacja email
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(email)) {
             alert('Proszę podać poprawny adres e-mail.');
             return;
         }
-        
+
         // Symulacja wysłania formularza
         alert('Dziękujemy za wiadomość! Skontaktujemy się wkrótce.');
         contactForm.reset();
@@ -291,7 +291,7 @@ const observerOptions = {
     rootMargin: '0px 0px -50px 0px'
 };
 
-const observer = new IntersectionObserver(function(entries) {
+const observer = new IntersectionObserver(function (entries) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.style.opacity = '1';
@@ -321,15 +321,15 @@ navLinks.forEach(link => {
 });
 
 // Advanced Parallax Effects
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     const scrolled = window.pageYOffset;
-    
+
     // Hero parallax
     const heroSlides = document.querySelectorAll('.hero-slide img');
     heroSlides.forEach(slide => {
         slide.style.transform = `translateY(${scrolled * 0.3}px) scale(${1 + scrolled * 0.0001})`;
     });
-    
+
     // Vertical text parallax
     const verticalTexts = document.querySelectorAll('.current-exhibition h2, .artists-section::before, .featured-artists::before');
     verticalTexts.forEach(text => {
@@ -341,7 +341,7 @@ window.addEventListener('scroll', function() {
             }
         }
     });
-    
+
     // Stats counter animation on scroll
     const statNumbers = document.querySelectorAll('.stat-number');
     statNumbers.forEach(stat => {
@@ -360,7 +360,7 @@ function animateNumber(element) {
     const increment = target / (duration / 16);
     let current = 0;
     const hasPlus = element.textContent.includes('+');
-    
+
     const timer = setInterval(() => {
         current += increment;
         if (current >= target) {
@@ -397,15 +397,15 @@ if ('loading' in HTMLImageElement.prototype) {
 const langButtons = document.querySelectorAll('.lang-btn');
 
 langButtons.forEach(button => {
-    button.addEventListener('click', function() {
+    button.addEventListener('click', function () {
         // Usuń active ze wszystkich przycisków
         langButtons.forEach(btn => btn.classList.remove('active'));
         // Dodaj active do klikniętego przycisku
         this.classList.add('active');
-        
+
         const selectedLang = this.getAttribute('data-lang');
         console.log(`Język zmieniony na: ${selectedLang}`);
-        
+
         // Tutaj możesz dodać logikę zmiany języka
         // np. localStorage.setItem('language', selectedLang);
     });
@@ -415,12 +415,12 @@ langButtons.forEach(button => {
 const newsletterForm = document.querySelector('.newsletter-form');
 
 if (newsletterForm) {
-    newsletterForm.addEventListener('submit', function(e) {
+    newsletterForm.addEventListener('submit', function (e) {
         e.preventDefault();
-        
+
         const emailInput = this.querySelector('.newsletter-input');
         const email = emailInput.value;
-        
+
         if (email) {
             alert('Dziękujemy za zapisanie się do newslettera!');
             emailInput.value = '';
@@ -429,7 +429,7 @@ if (newsletterForm) {
 }
 
 // Page Loading Animation
-window.addEventListener('load', function() {
+window.addEventListener('load', function () {
     // Fade in content
     document.body.style.opacity = '0';
     setTimeout(() => {
@@ -448,15 +448,15 @@ const imageObserver = new IntersectionObserver((entries) => {
             const img = entry.target;
             img.style.opacity = '0';
             img.style.transition = 'opacity 0.6s ease';
-            
+
             if (img.dataset.src) {
                 img.src = img.dataset.src;
             }
-            
+
             img.onload = () => {
                 img.style.opacity = '1';
             };
-            
+
             imageObserver.unobserve(img);
         }
     });
@@ -491,17 +491,17 @@ if (scrollToTopBtn) {
 
 // Image Error Handling
 document.querySelectorAll('img').forEach(img => {
-    img.addEventListener('error', function() {
+    img.addEventListener('error', function () {
         this.classList.add('error');
         if (!this.alt || this.alt === '') {
             this.alt = 'Obraz nie mógł zostać załadowany';
         }
         // Don't log to console to avoid noise
     });
-    
+
     // Check if image src is valid
     if (img.src && img.src !== '' && !img.complete) {
-        img.addEventListener('load', function() {
+        img.addEventListener('load', function () {
             this.classList.remove('error');
         });
     }
@@ -510,7 +510,7 @@ document.querySelectorAll('img').forEach(img => {
 // Form Loading State
 const forms = document.querySelectorAll('form');
 forms.forEach(form => {
-    form.addEventListener('submit', function(e) {
+    form.addEventListener('submit', function (e) {
         // Only add loading if form validation passes
         if (this.checkValidity()) {
             this.classList.add('form-loading');

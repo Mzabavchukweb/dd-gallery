@@ -1,3 +1,36 @@
+/* Courier Prime Font */
+@font-face {
+    font-family: 'Courier Prime';
+    src: url('../Courier_Prime_font/CourierPrime-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Courier Prime';
+    src: url('../Courier_Prime_font/CourierPrime-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Courier Prime';
+    src: url('../Courier_Prime_font/CourierPrime-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Courier Prime';
+    src: url('../Courier_Prime_font/CourierPrime-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
 /* Reset i Podstawowe Style */
 :root {
     --gold: #D4AF37;
@@ -19,6 +52,16 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
     position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.nav-menu a {
+    font-family: 'Courier Prime', 'Courier New', Courier, monospace;
 }
 
 body::before {
@@ -433,7 +476,7 @@ header {
     width: 100%;
     height: 100%;
     opacity: 0;
-    transition: opacity 1s ease-in-out;
+    transition: opacity 2s ease-in-out;
 }
 
 .hero-slide.active {
@@ -476,7 +519,7 @@ header {
 }
 
 .hero-content h1 {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Courier Prime', 'Courier New', Courier, monospace;
     font-size: 2.5rem;
     color: #f3f1ee;
     text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.7);
@@ -993,6 +1036,7 @@ header {
     overflow: hidden;
     background-color: #f3f1ee;
     transform-origin: center;
+    min-height: 400px;
 }
 
 .exhibition-item:nth-child(1) {
@@ -1018,7 +1062,7 @@ header {
 .exhibition-image {
     position: relative;
     overflow: hidden;
-    height: 450px;
+    height: 100%;
     background-color: #e8e6e1;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     transition: clip-path 0.7s cubic-bezier(0.4, 0, 0.2, 1);
@@ -1030,7 +1074,7 @@ header {
 }
 
 .exhibition-item:nth-child(4) .exhibition-image {
-    height: 350px;
+    height: 100%;
 }
 
 .exhibition-item:hover .exhibition-image {
