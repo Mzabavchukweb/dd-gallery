@@ -29,7 +29,7 @@ body::before {
     right: 0;
     bottom: 0;
     background: radial-gradient(circle at 20% 50%, rgba(33, 33, 33, 0.01) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(33, 33, 33, 0.01) 0%, transparent 50%);
+        radial-gradient(circle at 80% 80%, rgba(33, 33, 33, 0.01) 0%, transparent 50%);
     pointer-events: none;
     z-index: -1;
 }
@@ -65,10 +65,13 @@ body::before {
 }
 
 @keyframes pulse {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 0.6;
         transform: scale(1);
     }
+
     50% {
         opacity: 1;
         transform: scale(1.05);
@@ -117,10 +120,14 @@ body::before {
 }
 
 /* Typografia */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: 300;
     color: #212121;
-    letter-spacing: 2px;
     line-height: 1.3;
 }
 
@@ -255,7 +262,6 @@ header {
 .lang-btn {
     font-family: 'Times New Roman', Times, serif;
     font-size: 0.85rem;
-    letter-spacing: 1.5px;
     text-transform: uppercase;
     color: #212121;
     background: none;
@@ -363,7 +369,6 @@ header {
 .nav-menu li a {
     color: #212121;
     font-size: 1.3rem;
-    letter-spacing: 2px;
     text-transform: uppercase;
     padding: 12px 0;
     display: block;
@@ -413,7 +418,7 @@ header {
 /* Hero Section */
 .hero {
     position: relative;
-    height: 90vh;
+    height: 70vh;
     overflow: hidden;
     margin-top: -1px;
 }
@@ -452,6 +457,7 @@ header {
     from {
         transform: scale(1);
     }
+
     to {
         transform: scale(1.05);
     }
@@ -476,7 +482,6 @@ header {
     text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.7);
     margin-bottom: 1.5rem;
     font-weight: 300;
-    letter-spacing: 4px;
     line-height: 1.2;
     opacity: 0;
     animation: fadeIn 1.2s ease-out 0.3s forwards;
@@ -488,7 +493,6 @@ header {
     font-size: 1rem;
     color: #f3f1ee;
     text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
-    letter-spacing: 3px;
     text-transform: uppercase;
     font-weight: 300;
     opacity: 0;
@@ -499,6 +503,7 @@ header {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -539,7 +544,6 @@ header {
     background-color: #212121;
     color: #f3f1ee;
     text-transform: uppercase;
-    letter-spacing: 3px;
     font-size: 0.75rem;
     border: 2px solid #212121;
     cursor: pointer;
@@ -560,7 +564,6 @@ header {
     background-color: transparent;
     color: #212121;
     text-transform: uppercase;
-    letter-spacing: 2.5px;
     font-size: 0.75rem;
     border: 1px solid rgba(33, 33, 33, 0.3);
     cursor: pointer;
@@ -661,7 +664,6 @@ header {
     font-weight: 100;
     color: #212121;
     margin-bottom: 20px;
-    letter-spacing: -2px;
     line-height: 1;
     position: relative;
     display: inline-block;
@@ -682,7 +684,6 @@ header {
 .stat-label {
     font-size: 0.75rem;
     text-transform: uppercase;
-    letter-spacing: 3px;
     opacity: 0.6;
     font-weight: 400;
 }
@@ -709,7 +710,6 @@ header {
     font-size: 2.5rem;
     margin-bottom: 50px;
     font-weight: 300;
-    letter-spacing: 3px;
 }
 
 .about-preview p {
@@ -736,7 +736,6 @@ header {
     font-size: 12rem;
     font-weight: 100;
     color: rgba(33, 33, 33, 0.02);
-    letter-spacing: 20px;
     pointer-events: none;
 }
 
@@ -745,7 +744,6 @@ header {
     font-size: 3.5rem;
     margin-bottom: 100px;
     font-weight: 100;
-    letter-spacing: 8px;
     padding-left: 120px;
     text-transform: uppercase;
 }
@@ -880,7 +878,6 @@ header {
     font-size: 2rem;
     margin-bottom: 10px;
     font-weight: 300;
-    letter-spacing: 2px;
     transition: transform 0.3s ease;
 }
 
@@ -891,7 +888,6 @@ header {
 .featured-specialty {
     font-size: 0.75rem;
     text-transform: uppercase;
-    letter-spacing: 3px;
     opacity: 0.5;
     margin-bottom: 20px;
     font-weight: 400;
@@ -907,7 +903,6 @@ header {
 .featured-link {
     font-size: 0.8rem;
     text-transform: uppercase;
-    letter-spacing: 2px;
     display: inline-flex;
     align-items: center;
     gap: 10px;
@@ -977,7 +972,6 @@ header {
     top: 80px;
     font-size: 5rem;
     font-weight: 100;
-    letter-spacing: -2px;
     color: rgba(33, 33, 33, 0.03);
     writing-mode: vertical-rl;
     text-orientation: mixed;
@@ -1115,20 +1109,17 @@ header {
     color: #f3f1ee;
     margin-bottom: 15px;
     font-weight: 300;
-    letter-spacing: 3px;
 }
 
 .overlay p {
     font-size: 1rem;
     margin-bottom: 20px;
     opacity: 0.9;
-    letter-spacing: 2px;
 }
 
 .overlay .details {
     font-size: 0.85rem;
     text-transform: uppercase;
-    letter-spacing: 3px;
     position: relative;
     padding-bottom: 8px;
 }
@@ -1151,8 +1142,8 @@ header {
 
 /* Footer */
 footer {
-    background: linear-gradient(180deg, #1a1a1a 0%, #212121 100%);
-    color: #f3f1ee;
+    background-color: #f3f1ee;
+    color: #212121;
     padding: 140px 0 0;
     position: relative;
     overflow: hidden;
@@ -1165,7 +1156,7 @@ footer::before {
     left: 0;
     right: 0;
     height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(243, 241, 238, 0.3), transparent);
+    background: linear-gradient(90deg, transparent, rgba(33, 33, 33, 0.12), transparent);
 }
 
 footer::after {
@@ -1175,7 +1166,7 @@ footer::after {
     right: -100px;
     width: 400px;
     height: 400px;
-    background: radial-gradient(circle, rgba(243, 241, 238, 0.03) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(33, 33, 33, 0.03) 0%, transparent 70%);
     pointer-events: none;
 }
 
@@ -1192,8 +1183,7 @@ footer::after {
 
 .footer-logo img {
     height: 85px;
-    opacity: 0.9;
-    filter: brightness(0) invert(1);
+    opacity: 0.95;
     transition: opacity 0.3s ease;
 }
 
@@ -1209,11 +1199,10 @@ footer::after {
 }
 
 .footer-column h3 {
-    color: #f3f1ee;
+    color: #212121;
     margin-bottom: 35px;
     font-size: 1.1rem;
     text-transform: uppercase;
-    letter-spacing: 3.5px;
     font-weight: 300;
     position: relative;
     padding-bottom: 18px;
@@ -1226,7 +1215,7 @@ footer::after {
     left: 0;
     width: 45px;
     height: 1px;
-    background: linear-gradient(90deg, var(--gold), rgba(243, 241, 238, 0.3));
+    background: linear-gradient(90deg, var(--gold), rgba(33, 33, 33, 0.15));
     opacity: 0.6;
 }
 
@@ -1251,7 +1240,7 @@ footer::after {
 .footer-social a {
     width: 42px;
     height: 42px;
-    border: 1px solid rgba(243, 241, 238, 0.25);
+    border: 1px solid rgba(33, 33, 33, 0.2);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1271,7 +1260,7 @@ footer::after {
 .footer-social svg {
     width: 18px;
     height: 18px;
-    fill: #f3f1ee;
+    fill: #212121;
     transition: fill 0.3s ease;
 }
 
@@ -1291,13 +1280,12 @@ footer::after {
 }
 
 .footer-column ul li a {
-    color: #f3f1ee;
+    color: #212121;
     opacity: 0.75;
     font-size: 0.95rem;
     transition: all 0.4s ease;
     display: inline-block;
     font-weight: 300;
-    letter-spacing: 0.5px;
     position: relative;
 }
 
@@ -1332,9 +1320,9 @@ footer::after {
 .newsletter-input {
     width: 100%;
     padding: 16px;
-    background-color: rgba(243, 241, 238, 0.05);
-    border: 1px solid rgba(243, 241, 238, 0.2);
-    color: #f3f1ee;
+    background-color: rgba(33, 33, 33, 0.04);
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    color: #212121;
     font-family: 'Times New Roman', Times, serif;
     font-size: 0.9rem;
     margin-bottom: 18px;
@@ -1344,39 +1332,38 @@ footer::after {
 .newsletter-input:focus {
     outline: 2px solid var(--gold);
     outline-offset: 2px;
-    background-color: rgba(243, 241, 238, 0.08);
+    background-color: rgba(33, 33, 33, 0.06);
     border-color: var(--gold);
 }
 
 .newsletter-input::placeholder {
-    color: rgba(243, 241, 238, 0.5);
+    color: rgba(33, 33, 33, 0.5);
 }
 
 .newsletter-btn {
     width: 100%;
     padding: 16px;
     background-color: transparent;
-    border: 1px solid #f3f1ee;
-    color: #f3f1ee;
+    border: 1px solid #212121;
+    color: #212121;
     font-family: 'Times New Roman', Times, serif;
     font-size: 0.85rem;
     text-transform: uppercase;
-    letter-spacing: 2.5px;
     cursor: pointer;
     transition: all 0.3s ease;
     font-weight: 300;
 }
 
 .newsletter-btn:hover {
-    background-color: rgba(243, 241, 238, 0.1);
-    border-color: rgba(243, 241, 238, 0.8);
-    color: #f3f1ee;
+    background-color: rgba(33, 33, 33, 0.06);
+    border-color: rgba(33, 33, 33, 0.5);
+    color: #212121;
 }
 
 .footer-bottom {
     text-align: center;
     padding: 50px 0;
-    border-top: 1px solid rgba(243, 241, 238, 0.12);
+    border-top: 1px solid rgba(33, 33, 33, 0.1);
     position: relative;
     z-index: 1;
 }
@@ -1392,7 +1379,6 @@ footer::after {
 .footer-copyright {
     font-size: 0.85rem;
     opacity: 0.65;
-    letter-spacing: 1.5px;
     font-weight: 300;
 }
 
@@ -1404,7 +1390,6 @@ footer::after {
 .footer-links a {
     font-size: 0.85rem;
     opacity: 0.65;
-    letter-spacing: 1.5px;
     transition: all 0.4s ease;
     font-weight: 300;
     position: relative;
@@ -1467,7 +1452,6 @@ footer::after {
     font-size: 4.5rem;
     margin-bottom: 40px;
     font-weight: 100;
-    letter-spacing: 8px;
     text-transform: uppercase;
     position: relative;
     display: inline-block;
@@ -1487,7 +1471,6 @@ footer::after {
     font-size: 1.2rem;
     opacity: 0.5;
     font-weight: 300;
-    letter-spacing: 2px;
     text-transform: uppercase;
     max-width: 600px;
 }
@@ -1591,7 +1574,6 @@ footer::after {
     color: #f3f1ee;
     padding: 15px 25px;
     font-size: 0.75rem;
-    letter-spacing: 2px;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(243, 241, 238, 0.2);
     transition: all 0.3s ease;
@@ -1625,7 +1607,6 @@ footer::after {
 .event-content h3 {
     font-size: 1.9rem;
     margin-bottom: 15px;
-    letter-spacing: 1px;
     font-weight: 300;
     transition: color 0.3s ease;
 }
@@ -1639,7 +1620,6 @@ footer::after {
     opacity: 0.6;
     margin-bottom: 20px;
     font-size: 0.95rem;
-    letter-spacing: 0.5px;
 }
 
 /* Targi Section - CREATIVE CARDS */
@@ -1665,7 +1645,6 @@ footer::after {
     margin-bottom: 70px;
     font-size: 2.2rem;
     font-weight: 100;
-    letter-spacing: 5px;
     text-transform: uppercase;
     position: relative;
 }
@@ -1686,7 +1665,7 @@ footer::after {
     margin: 0 auto;
 }
 
-.fair-info > p {
+.fair-info>p {
     text-align: center;
     font-size: 1.1rem;
     line-height: 2;
@@ -1752,13 +1731,10 @@ footer::after {
     display: block;
     margin-bottom: 12px;
     font-weight: 300;
-    letter-spacing: 2px;
     transition: all 0.3s ease;
 }
 
-.fairs-list li:hover strong {
-    letter-spacing: 3px;
-}
+.fairs-list li:hover strong {}
 
 .fairs-list li:not(:has(strong)) {
     font-size: 1rem;
@@ -1783,7 +1759,6 @@ footer::after {
     font-size: 15rem;
     font-weight: 100;
     color: rgba(33, 33, 33, 0.015);
-    letter-spacing: 30px;
     pointer-events: none;
     z-index: 0;
 }
@@ -1946,14 +1921,11 @@ footer::after {
 .artist-info h3 {
     font-size: 1.6rem;
     margin-bottom: 8px;
-    letter-spacing: 1px;
     font-weight: 300;
     transition: all 0.3s ease;
 }
 
-.artist-card:hover .artist-info h3 {
-    letter-spacing: 2px;
-}
+.artist-card:hover .artist-info h3 {}
 
 .artist-specialty {
     font-style: normal;
@@ -1961,7 +1933,6 @@ footer::after {
     margin-bottom: 15px;
     font-size: 0.7rem;
     text-transform: uppercase;
-    letter-spacing: 3px;
     font-weight: 400;
 }
 
@@ -2072,7 +2043,6 @@ footer::after {
     color: #f3f1ee;
     padding: 12px 20px;
     font-size: 0.75rem;
-    letter-spacing: 2px;
     backdrop-filter: blur(10px);
     z-index: 2;
     border: 1px solid rgba(243, 241, 238, 0.2);
@@ -2092,7 +2062,6 @@ footer::after {
     font-size: 2.2rem;
     margin-bottom: 25px;
     font-weight: 300;
-    letter-spacing: 1px;
     line-height: 1.4;
     transition: all 0.3s ease;
 }
@@ -2141,7 +2110,6 @@ footer::after {
     text-align: left;
     font-size: 3rem;
     font-weight: 100;
-    letter-spacing: 4px;
     margin-bottom: 60px;
     position: relative;
     padding-bottom: 30px;
@@ -2276,7 +2244,6 @@ footer::after {
     margin-bottom: 30px;
     font-size: 2.2rem;
     font-weight: 100;
-    letter-spacing: 3px;
     text-transform: uppercase;
 }
 
@@ -2296,7 +2263,6 @@ footer::after {
 .gallery-space h2 {
     font-size: 2.5rem;
     font-weight: 100;
-    letter-spacing: 4px;
     margin-bottom: 50px;
     position: relative;
     padding-left: 100px;
@@ -2366,7 +2332,6 @@ footer::after {
     font-size: 1.2rem;
     margin-bottom: 20px;
     font-weight: 300;
-    letter-spacing: 2px;
     text-transform: uppercase;
 }
 
@@ -2416,7 +2381,6 @@ footer::after {
     color: #212121;
     font-family: 'Times New Roman', Times, serif;
     font-size: 0.85rem;
-    letter-spacing: 2.5px;
     text-transform: uppercase;
     cursor: pointer;
     position: relative;
@@ -2536,6 +2500,7 @@ footer::after {
     0% {
         background-position: 200% 0;
     }
+
     100% {
         background-position: -200% 0;
     }
@@ -2620,7 +2585,6 @@ footer::after {
     border: 1px solid #f3f1ee;
     font-family: 'Times New Roman', Times, serif;
     font-size: 0.8rem;
-    letter-spacing: 3px;
     text-transform: uppercase;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -2665,13 +2629,10 @@ footer::after {
     font-size: 1.4rem;
     margin-bottom: 10px;
     font-weight: 300;
-    letter-spacing: 1px;
     transition: all 0.3s ease;
 }
 
-.catalog-item:hover .catalog-info h3 {
-    letter-spacing: 2px;
-}
+.catalog-item:hover .catalog-info h3 {}
 
 .artist-name {
     font-style: italic;
@@ -2684,7 +2645,6 @@ footer::after {
 .artwork-details {
     font-size: 0.8rem;
     opacity: 0.5;
-    letter-spacing: 0.5px;
     line-height: 1.6;
 }
 
@@ -2731,7 +2691,6 @@ footer::after {
     margin-bottom: 40px;
     font-size: 2.5rem;
     font-weight: 300;
-    letter-spacing: 2px;
 }
 
 .form-group {
@@ -2743,7 +2702,6 @@ footer::after {
     display: block;
     margin-bottom: 10px;
     font-size: 0.9rem;
-    letter-spacing: 1.5px;
     text-transform: uppercase;
     font-weight: 300;
     opacity: 0.8;
@@ -2839,7 +2797,6 @@ footer::after {
     font-size: 2.5rem;
     margin-bottom: 40px;
     font-weight: 100;
-    letter-spacing: 3px;
 }
 
 .info-item {
@@ -2873,7 +2830,6 @@ footer::after {
     font-size: 0.9rem;
     margin-bottom: 12px;
     text-transform: uppercase;
-    letter-spacing: 3px;
     font-weight: 400;
     opacity: 0.6;
 }
@@ -2928,14 +2884,12 @@ footer::after {
 .map-content p {
     font-size: 1.3rem;
     font-weight: 300;
-    letter-spacing: 2px;
 }
 
 .map-note {
     font-style: italic;
     opacity: 0.5;
     font-size: 0.9rem !important;
-    letter-spacing: 1px;
     margin-top: 10px;
 }
 
@@ -2961,7 +2915,6 @@ footer::after {
     margin-bottom: 60px;
     font-size: 2.2rem;
     font-weight: 100;
-    letter-spacing: 4px;
 }
 
 .transport-info {
@@ -3008,7 +2961,6 @@ footer::after {
     font-size: 1.1rem;
     margin-bottom: 20px;
     text-transform: uppercase;
-    letter-spacing: 3px;
     font-weight: 300;
 }
 
@@ -3082,7 +3034,6 @@ footer::after {
     text-decoration: none;
     z-index: 10000;
     font-weight: 400;
-    letter-spacing: 2px;
     text-transform: uppercase;
     transition: top 0.3s ease;
 }
@@ -3105,7 +3056,7 @@ img:not([src]) {
 
 img.error {
     background-color: #e8e6e1;
-    background-image: 
+    background-image:
         linear-gradient(45deg, #d0d0d0 25%, transparent 25%),
         linear-gradient(-45deg, #d0d0d0 25%, transparent 25%),
         linear-gradient(45deg, transparent 75%, #d0d0d0 75%),
@@ -3147,28 +3098,28 @@ img.error {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
     }
-    
+
     .exhibition-item:nth-child(1) {
         grid-column: span 2;
     }
-    
+
     .exhibition-item:nth-child(2),
     .exhibition-item:nth-child(3),
     .exhibition-item:nth-child(4) {
         grid-column: span 1;
     }
-    
+
     .artists-grid {
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(2, 400px);
     }
-    
+
     .artist-card:nth-child(1),
     .artist-card:nth-child(3) {
         grid-column: span 2;
         grid-row: span 1;
     }
-    
+
     .artist-card:nth-child(2),
     .artist-card:nth-child(4),
     .artist-card:nth-child(5),
@@ -3181,83 +3132,81 @@ img.error {
 @media (max-width: 1024px) {
     .hero-content h1 {
         font-size: 2rem;
-        letter-spacing: 3px;
         white-space: nowrap;
     }
-    
+
     .hero-content p {
         font-size: 0.9rem;
-        letter-spacing: 2px;
     }
-    
+
     .stats-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .featured-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .featured-item:nth-child(1),
     .featured-item:nth-child(3) {
         transform: translateY(-20px);
     }
-    
+
     .featured-item:nth-child(2) {
         transform: translateY(20px);
     }
-    
+
     .news-item {
         grid-template-columns: 1fr;
         gap: 40px;
     }
-    
+
     .news-image {
         height: 300px;
     }
-    
+
     .news-item:hover {
         padding-left: 0;
     }
-    
+
     .contact-grid {
         grid-template-columns: 1fr;
         gap: 60px;
     }
-    
+
     .mission-vision {
         grid-template-columns: 1fr;
         gap: 1px;
     }
-    
+
     .space-features {
         grid-template-columns: 1fr;
         gap: 1px;
     }
-    
+
     .transport-info {
         grid-template-columns: 1fr;
         gap: 1px;
     }
-    
+
     .about-text {
         grid-template-columns: 1fr;
         gap: 40px;
     }
-    
+
     .about-gallery {
         grid-template-columns: 1fr;
     }
-    
+
     .gallery-item:last-child {
         transform: translateY(0);
     }
-    
+
     .artist-detail-grid {
         grid-template-columns: 1fr;
         gap: 60px;
     }
-    
+
     .artist-detail-grid::before {
         display: none;
     }
@@ -3267,19 +3216,19 @@ img.error {
     .navbar .container {
         grid-template-columns: auto 1fr auto;
     }
-    
+
     .language-social-left {
         gap: 15px;
     }
-    
+
     .social-icons {
         gap: 15px;
     }
-    
+
     .language-switcher {
         gap: 10px;
     }
-    
+
     .lang-btn {
         font-size: 0.75rem;
     }
@@ -3289,84 +3238,82 @@ img.error {
     .navbar {
         padding: 20px 0;
     }
-    
+
     .navbar .container {
         grid-template-columns: 1fr auto 1fr;
         gap: 15px;
     }
-    
+
     .logo img {
         height: 60px;
     }
-    
+
     .language-social-left {
         flex-direction: column;
         align-items: flex-start;
         gap: 8px;
     }
-    
+
     .social-icons {
         gap: 12px;
     }
-    
+
     .social-icons svg {
         width: 16px;
         height: 16px;
     }
-    
+
     .language-switcher {
         gap: 6px;
     }
-    
+
     .lang-btn {
         font-size: 0.65rem;
         padding: 2px 0;
     }
-    
+
     .lang-separator {
         font-size: 0.65rem;
     }
-    
+
     .nav-menu {
         width: 100%;
         max-width: 100%;
         padding: 100px 40px 60px;
     }
-    
+
     .nav-menu li a {
         font-size: 1.3rem;
         padding: 15px 0;
     }
-    
+
     .hero {
         height: 70vh;
     }
-    
+
     .hero-content h1 {
         font-size: 1.5rem;
-        letter-spacing: 2px;
         white-space: nowrap;
     }
-    
+
     .hero-content p {
         font-size: 0.85rem;
-        letter-spacing: 1.5px;
     }
-    
+
     .exhibition-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .exhibition-item:nth-child(1) {
         grid-column: span 1;
     }
-    
+
     .artists-grid {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
         gap: 40px;
     }
-    
+
     .artist-card:nth-child(1),
     .artist-card:nth-child(2),
     .artist-card:nth-child(3),
@@ -3376,19 +3323,19 @@ img.error {
         grid-column: span 1;
         grid-row: auto;
     }
-    
+
     .artist-card:nth-child(1) .artist-image,
     .artist-card:nth-child(3) .artist-image,
     .artist-card:nth-child(4) .artist-image {
         height: 400px;
     }
-    
+
     .exhibition-grid {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
         gap: 30px;
     }
-    
+
     .exhibition-item:nth-child(1),
     .exhibition-item:nth-child(2),
     .exhibition-item:nth-child(3),
@@ -3396,16 +3343,16 @@ img.error {
         grid-column: span 1;
         grid-row: auto;
     }
-    
+
     .exhibition-item:nth-child(1) .exhibition-image {
         height: 450px;
         min-height: auto;
     }
-    
+
     .exhibition-item:nth-child(4) .exhibition-image {
         height: 450px;
     }
-    
+
     .current-exhibition h2 {
         position: static;
         font-size: 2rem;
@@ -3415,45 +3362,45 @@ img.error {
         color: #212121;
         opacity: 0.1;
     }
-    
+
     .catalog-grid {
         grid-template-columns: 1fr;
         gap: 50px;
     }
-    
+
     .catalog-item:nth-child(3n+1),
     .catalog-item:nth-child(3n+2),
     .catalog-item:nth-child(3n) {
         transform: translateY(0);
     }
-    
+
     .catalog-item:nth-child(3n+1):hover,
     .catalog-item:nth-child(3n+2):hover,
     .catalog-item:nth-child(3n):hover {
         transform: translateY(-10px) scale(1.02);
     }
-    
+
     .news-item {
         grid-template-columns: 1fr;
         gap: 30px;
     }
-    
+
     .news-image {
         height: 280px;
     }
-    
+
     .event-image {
         height: 300px;
     }
-    
+
     .about-preview {
         padding: 80px 0 100px;
     }
-    
+
     .current-exhibition {
         padding: 80px 0 100px;
     }
-    
+
     .events-section,
     .artists-section,
     .news-section,
@@ -3461,25 +3408,25 @@ img.error {
     .contact-section {
         padding: 80px 0 100px;
     }
-    
+
     .stats-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 40px;
     }
-    
+
     .stat-number {
         font-size: 3rem;
     }
-    
+
     .featured-grid {
         grid-template-columns: 1fr;
         gap: 60px;
     }
-    
+
     .featured-grid::before {
         display: none;
     }
-    
+
     .featured-item,
     .featured-item:nth-child(1),
     .featured-item:nth-child(2),
@@ -3487,99 +3434,97 @@ img.error {
         transform: translateY(0);
         margin: 0;
     }
-    
+
     .featured-item:hover,
     .featured-item:nth-child(2):hover {
         transform: translateY(-10px) scale(1.02);
     }
-    
+
     .featured-artists h2 {
         font-size: 2rem;
         padding-left: 0;
         text-align: center;
         margin-bottom: 60px;
     }
-    
+
     .featured-artists h2::before {
         display: none;
     }
-    
+
     .featured-artists::before {
         display: none;
     }
-    
+
     .featured-info {
         margin-top: -40px;
     }
-    
+
     .featured-item:hover .featured-info {
         margin-top: -50px;
     }
-    
+
     .footer-content {
         grid-template-columns: 1fr;
         gap: 40px;
     }
-    
+
     .footer-about {
         grid-column: span 1;
     }
-    
+
     .footer-newsletter {
         grid-column: span 1;
     }
-    
+
     .footer-bottom-content {
         flex-direction: column;
         text-align: center;
     }
-    
+
     .footer-links {
         flex-direction: column;
         gap: 15px;
     }
-    
+
     .hero-content p {
         font-size: 0.9rem;
     }
-    
+
     h1 {
         font-size: 2rem;
     }
-    
+
     h2 {
         font-size: 1.6rem;
     }
-    
+
     .page-header h1 {
         font-size: 2rem;
     }
-    
+
     .page-header {
         padding: 100px 0 60px;
         text-align: left;
     }
-    
+
     .page-header h1 {
         font-size: 2.8rem;
-        letter-spacing: 4px;
     }
-    
+
     .page-header h1::before {
         width: 50px;
         height: 1px;
         top: -15px;
     }
-    
+
     .page-header p {
         font-size: 0.9rem;
-        letter-spacing: 1px;
     }
-    
+
     body::before {
         display: none;
     }
-    
+
     .artists-section::before,
     .artists-section::after,
     .current-exhibition::before,
@@ -3591,23 +3536,23 @@ img.error {
     .contact-section::before {
         display: none;
     }
-    
-    
+
+
     .exhibition-grid,
     .events-grid,
     .artists-grid,
     .catalog-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .about-gallery {
         grid-template-columns: 1fr;
     }
-    
+
     .contact-form-wrapper {
         padding: 30px;
     }
-    
+
     .scroll-to-top {
         width: 45px;
         height: 45px;
@@ -3716,7 +3661,6 @@ img.error {
     font-size: 3rem;
     margin-bottom: 20px;
     font-weight: 100;
-    letter-spacing: 4px;
     line-height: 1.2;
     position: relative;
     padding-left: 30px;
@@ -3738,7 +3682,6 @@ img.error {
     opacity: 0.5;
     margin-bottom: 50px;
     text-transform: uppercase;
-    letter-spacing: 4px;
     font-weight: 400;
     padding-left: 30px;
 }
@@ -3800,7 +3743,6 @@ img.error {
     font-size: 1.2rem;
     margin-bottom: 35px;
     text-transform: uppercase;
-    letter-spacing: 4px;
     font-weight: 300;
     opacity: 0.8;
 }
@@ -3825,7 +3767,6 @@ img.error {
     font-weight: 400;
     min-width: 160px;
     text-transform: uppercase;
-    letter-spacing: 2px;
     font-size: 0.75rem;
     opacity: 0.6;
 }
@@ -3846,7 +3787,7 @@ img.error {
 
 .artist-works-section {
     padding: 80px 0;
-    background-color: #e8e6e1;
+    background-color: #ffffff;
 }
 
 .artist-works-section h2 {
@@ -3862,9 +3803,10 @@ img.error {
 }
 
 .work-item {
-    background-color: #f3f1ee;
+    background-color: #ffffff;
     overflow: hidden;
     transition: transform 0.3s ease;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
 }
 
 .work-item:hover {
@@ -3910,7 +3852,6 @@ img.error {
     color: #212121;
     font-size: 0.8rem;
     text-transform: uppercase;
-    letter-spacing: 3px;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     font-weight: 400;
     opacity: 0.7;
@@ -3957,12 +3898,12 @@ img.error {
         grid-template-columns: 1fr;
         gap: 40px;
     }
-    
+
     .artist-main-image {
         position: relative;
         top: 0;
     }
-    
+
     .artist-detail-info h1 {
         font-size: 2.5rem;
     }
@@ -3972,32 +3913,31 @@ img.error {
     .artist-detail-info h1 {
         font-size: 2rem;
     }
-    
+
     .artist-category {
         font-size: 1.1rem;
     }
-    
+
     .artist-details-list {
         padding: 30px 20px;
     }
-    
+
     .detail-item {
         flex-direction: column;
         gap: 5px;
     }
-    
+
     .detail-label {
         min-width: auto;
     }
-    
+
     .artist-cta {
         flex-direction: column;
     }
-    
+
     .artist-cta .btn,
     .artist-cta .btn-small {
         width: 100%;
         text-align: center;
     }
 }
-
