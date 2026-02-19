@@ -3465,7 +3465,7 @@ img.error {
     }
 
     .hero-content h1 {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         white-space: nowrap;
     }
 
@@ -4078,13 +4078,13 @@ img.error {
     }
 
     .artist-detail-info h1 {
-        font-size: 2.5rem;
+        font-size: 1.8rem;
     }
 }
 
 @media (max-width: 768px) {
     .artist-detail-info h1 {
-        font-size: 2rem;
+        font-size: 1.4rem;
     }
 
     .artist-category {
