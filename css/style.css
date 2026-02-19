@@ -3465,7 +3465,7 @@ img.error {
     }
 
     .hero-content h1 {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         white-space: nowrap;
     }
 
@@ -3614,10 +3614,10 @@ img.error {
     }
 
     .featured-artists h2 {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
         padding-left: 0;
         text-align: center;
-        margin-bottom: 60px;
+        margin-bottom: 40px;
     }
 
     .featured-artists h2::before {
@@ -3660,7 +3660,7 @@ img.error {
     }
 
     .hero-content p {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
 
     h1 {
@@ -3672,7 +3672,7 @@ img.error {
     }
 
     .page-header h1 {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
     }
 
     .page-header {
@@ -3681,7 +3681,7 @@ img.error {
     }
 
     .page-header h1 {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
     }
 
     .page-header h1::before {
@@ -3691,7 +3691,7 @@ img.error {
     }
 
     .page-header p {
-        font-size: 0.8rem;
+        font-size: 0.85rem;
     }
 
     body::before {
@@ -4078,13 +4078,13 @@ img.error {
     }
 
     .artist-detail-info h1 {
-        font-size: 1.8rem;
+        font-size: 2.5rem;
     }
 }
 
 @media (max-width: 768px) {
     .artist-detail-info h1 {
-        font-size: 1.4rem;
+        font-size: 2rem;
     }
 
     .artist-category {
