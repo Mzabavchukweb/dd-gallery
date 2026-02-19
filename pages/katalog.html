@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Piotr Zieliński - DD Art Gallery</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Katalogi - DD Art Gallery</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+    <!-- Header -->
     <!-- Header -->
     <header>
         <nav class="navbar">
@@ -33,8 +34,8 @@
                     </div>
                 </div>
                 <div class="logo">
-                    <a href="index.html">
-                        <img src="DD_Art_Gallery_gold.png" alt="DD Art Gallery">
+                    <a href="../index.html">
+                        <img src="../images/logo/DD_Art_Gallery_gold.png" alt="DD Art Gallery">
                     </a>
                 </div>
                 <div class="navbar-right">
@@ -45,10 +46,10 @@
                     </div>
                 </div>
                 <ul class="nav-menu">
-                    <li><a href="index.html">O GALERII</a></li>
+                    <li><a href="../index.html">O GALERII</a></li>
                     <li><a href="wydarzenia.html">WYDARZENIA</a></li>
-                    <li><a href="artysci.html" class="active">ARTYŚCI</a></li>
-                    <li><a href="katalog.html">KATALOGI</a></li>
+                    <li><a href="artysci.html">ARTYŚCI</a></li>
+                    <li><a href="katalog.html" class="active">KATALOGI</a></li>
                     <li><a href="kontakt.html">KONTAKT</a></li>
                 </ul>
             </div>
@@ -56,111 +57,148 @@
     </header>
 
 
-    <!-- Artist Detail -->
-    <section class="artist-detail">
+    <!-- Page Header -->
+    <section class="page-header">
         <div class="container">
-            <a href="artysci.html" class="back-to-artists">Powrót do artystów</a>
-            
-            <div class="artist-detail-grid">
-                <!-- Główne zdjęcie -->
-                <div class="artist-main-image">
-                    <img src="IMG_5565.jpeg" alt="Piotr Zieliński - Forma Abstrakcyjna">
-                </div>
+            <h1>Katalog Dzieł</h1>
+            <p>Przeglądaj dostępne prace w naszej kolekcji</p>
+        </div>
+    </section>
 
-                <!-- Informacje o artyście -->
-                <div class="artist-detail-info">
-                    <h1>Piotr Zieliński</h1>
-                    <p class="artist-category">Rzeźba</p>
-
-                    <div class="artist-bio">
-                        <p>Piotr Zieliński (ur. 1972) to uznany polski rzeźbiarz, którego twórczość eksploruje granice między abstrakcją a organicznymi formami natury. Studiował rzeźbę na Akademii Sztuk Pięknych we Wrocławiu pod kierunkiem prof. Gustawa Zemły, gdzie obronił dyplom z wyróżnieniem w 1997 roku.</p>
-                        
-                        <p>Głównym materiałem pracy artysty jest kamień – granit, marmur, bazalt – które poddaje subtelnej obróbce, odsłaniając ich wewnętrzną strukturę i piękno. Zieliński nie narzuca materiałowi swojej woli; raczej współpracuje z nim, wydobywając ukryte w nim formy. Jego rzeźby charakteryzuje gładka, polerowana powierzchnia kontrastująca z surowymi, naturalnymi fragmentami kamienia.</p>
-                        
-                        <p>W swoich pracach artysta bada relację między masą a przestrzenią, ciężarem a lekkością, stałością a ruchem. Jego organiczne formy przypominają jednocześnie okruchy natury i futurystyczne obiekty, balansując między tym, co znane, a tym, co abstrakcyjne.</p>
-                        
-                        <p>Prace Zielińskiego prezentowane były na licznych wystawach indywidualnych i zbiorowych w Polsce i za granicą. Jego monumentalne rzeźby znajdują się w przestrzeniach publicznych w Warszawie, Wrocławiu i Gdańsku oraz w znaczących kolekcjach prywatnych.</p>
-                    </div>
-
-                    <div class="artist-details-list">
-                        <h3>Informacje</h3>
-                        <div class="detail-item">
-                            <span class="detail-label">Ur.:</span>
-                            <span class="detail-value">1972, Wrocław</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Edukacja:</span>
-                            <span class="detail-value">ASP Wrocław (1992-1997)</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Technika:</span>
-                            <span class="detail-value">Rzeźba w kamieniu, brąz</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Styl:</span>
-                            <span class="detail-value">Abstrakcja organiczna</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Reprezentacja:</span>
-                            <span class="detail-value">DD Art Gallery, Warszawa</span>
-                        </div>
-                    </div>
-
-                    <div class="artist-cta">
-                        <a href="kontakt.html" class="btn">Zapytaj o prace</a>
-                        <a href="#works" class="btn-small">Zobacz wszystkie prace</a>
-                    </div>
-                </div>
+    <!-- Filtry -->
+    <section class="catalog-filters">
+        <div class="container">
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">Wszystkie</button>
+                <button class="filter-btn" data-filter="malarstwo">Malarstwo</button>
+                <button class="filter-btn" data-filter="rzezba">Rzeźba</button>
+                <button class="filter-btn" data-filter="grafika">Grafika</button>
+                <button class="filter-btn" data-filter="techniki-mieszane">Techniki Mieszane</button>
             </div>
         </div>
     </section>
 
-    <!-- Wybrane prace artysty -->
-    <section class="artist-works-section" id="works">
+    <!-- Katalog Content -->
+    <section class="catalog-section">
         <div class="container">
-            <h2>Wybrane Prace</h2>
-            <div class="artist-works-grid">
+            <div class="catalog-grid">
                 <!-- Praca 1 -->
-                <div class="work-item">
-                    <div class="work-image">
-                        <img src="IMG_5565.jpeg" alt="Praca">
+                <div class="catalog-item" data-category="malarstwo">
+                    <div class="catalog-image">
+                        <img src="../images/artists/IMG_5563.jpeg" alt="Dzieło">
+                        <div class="catalog-overlay">
+                            <button class="view-btn">Zobacz szczegóły</button>
+                        </div>
                     </div>
-                    <div class="work-info">
-                        <h4>Forma Abstrakcyjna</h4>
-                        <p class="work-details">2023<br>Granit polerowany<br>wys. 85 cm</p>
+                    <div class="catalog-info">
+                        <h3>Dychotomia Twarzy</h3>
+                        <p class="artist-name">Anna Kowalska</p>
+                        <p class="artwork-details">Olej na płótnie, 120 x 100 cm, 2024</p>
                     </div>
                 </div>
 
                 <!-- Praca 2 -->
-                <div class="work-item">
-                    <div class="work-image">
-                        <img src="IMG_5565.jpeg" alt="Praca">
+                <div class="catalog-item" data-category="grafika">
+                    <div class="catalog-image">
+                        <img src="../images/artists/warlikowska/IMG_6925.webp" alt="Dzieło">
+                        <div class="catalog-overlay">
+                            <button class="view-btn">Zobacz szczegóły</button>
+                        </div>
                     </div>
-                    <div class="work-info">
-                        <h4>Organiczna Forma II</h4>
-                        <p class="work-details">2024<br>Marmur Carrara<br>wys. 95 cm</p>
+                    <div class="catalog-info">
+                        <h3>Spojrzenie</h3>
+                        <p class="artist-name">Małgorzata ET BER Warlikowska</p>
+                        <p class="artwork-details">Rysunek, 70 x 100 cm, 2024</p>
                     </div>
                 </div>
 
                 <!-- Praca 3 -->
-                <div class="work-item">
-                    <div class="work-image">
-                        <img src="IMG_5565.jpeg" alt="Praca">
+                <div class="catalog-item" data-category="rzezba">
+                    <div class="catalog-image">
+                        <img src="../images/artists/IMG_5565.jpeg" alt="Dzieło">
+                        <div class="catalog-overlay">
+                            <button class="view-btn">Zobacz szczegóły</button>
+                        </div>
                     </div>
-                    <div class="work-info">
-                        <h4>Metamorfoza</h4>
-                        <p class="work-details">2023<br>Bazalt<br>wys. 120 cm</p>
+                    <div class="catalog-info">
+                        <h3>Forma Abstrakcyjna</h3>
+                        <p class="artist-name">Piotr Zieliński</p>
+                        <p class="artwork-details">Rzeźba, wys. 85 cm, 2023</p>
                     </div>
                 </div>
 
                 <!-- Praca 4 -->
-                <div class="work-item">
-                    <div class="work-image">
-                        <img src="IMG_5565.jpeg" alt="Praca">
+                <div class="catalog-item" data-category="techniki-mieszane">
+                    <div class="catalog-image">
+                        <img src="../images/artists/IMG_5566.jpeg" alt="Dzieło">
+                        <div class="catalog-overlay">
+                            <button class="view-btn">Zobacz szczegóły</button>
+                        </div>
                     </div>
-                    <div class="work-info">
-                        <h4>Płynność</h4>
-                        <p class="work-details">2022<br>Brąz patynowany<br>wys. 75 cm</p>
+                    <div class="catalog-info">
+                        <h3>Anioł i Człowiek</h3>
+                        <p class="artist-name">Katarzyna Lewandowska</p>
+                        <p class="artwork-details">Kolaż, 150 x 120 cm, 2024</p>
+                    </div>
+                </div>
+
+                <!-- Praca 5 -->
+                <div class="catalog-item" data-category="malarstwo">
+                    <div class="catalog-image">
+                        <img src="../images/artists/IMG_5563.jpeg" alt="Dzieło">
+                        <div class="catalog-overlay">
+                            <button class="view-btn">Zobacz szczegóły</button>
+                        </div>
+                    </div>
+                    <div class="catalog-info">
+                        <h3>Portret Nowoczesny</h3>
+                        <p class="artist-name">Tomasz Wiśniewski</p>
+                        <p class="artwork-details">Akryl na płótnie, 100 x 80 cm, 2024</p>
+                    </div>
+                </div>
+
+                <!-- Praca 6 -->
+                <div class="catalog-item" data-category="rzezba">
+                    <div class="catalog-image">
+                        <img src="../images/artists/IMG_5565.jpeg" alt="Dzieło">
+                        <div class="catalog-overlay">
+                            <button class="view-btn">Zobacz szczegóły</button>
+                        </div>
+                    </div>
+                    <div class="catalog-info">
+                        <h3>Organiczna Forma II</h3>
+                        <p class="artist-name">Joanna Kamińska</p>
+                        <p class="artwork-details">Ceramika, wys. 65 cm, 2024</p>
+                    </div>
+                </div>
+
+                <!-- Praca 7 -->
+                <div class="catalog-item" data-category="grafika">
+                    <div class="catalog-image">
+                        <img src="../images/artists/warlikowska/IMG_6928.webp" alt="Dzieło">
+                        <div class="catalog-overlay">
+                            <button class="view-btn">Zobacz szczegóły</button>
+                        </div>
+                    </div>
+                    <div class="catalog-info">
+                        <h3>Ekspresja Wzroku</h3>
+                        <p class="artist-name">Małgorzata ET BER Warlikowska</p>
+                        <p class="artwork-details">Linoryt, 50 x 70 cm, 2023</p>
+                    </div>
+                </div>
+
+                <!-- Praca 8 -->
+                <div class="catalog-item" data-category="techniki-mieszane">
+                    <div class="catalog-image">
+                        <img src="../images/artists/IMG_5566.jpeg" alt="Dzieło">
+                        <div class="catalog-overlay">
+                            <button class="view-btn">Zobacz szczegóły</button>
+                        </div>
+                    </div>
+                    <div class="catalog-info">
+                        <h3>Fragmenty Pamięci</h3>
+                        <p class="artist-name">Anna Kowalska</p>
+                        <p class="artwork-details">Technika mieszana, 130 x 100 cm, 2024</p>
                     </div>
                 </div>
             </div>
@@ -172,7 +210,7 @@
         <div class="container">
             <div class="footer-main">
                 <div class="footer-logo">
-                    <img src="DD_Art_Gallery_gold.png" alt="DD Art Gallery">
+                    <img src="../images/logo/DD_Art_Gallery_gold.png" alt="DD Art Gallery">
                 </div>
                 
                 <div class="footer-content">
@@ -243,7 +281,9 @@
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="../js/script.js">
+
+    <script src="../js/script.js"></script>
 </body>
 </html>
 

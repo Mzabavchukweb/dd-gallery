@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artyści - DD Art Gallery</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Kontakt - DD Art Gallery</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+    <!-- Header -->
     <!-- Header -->
     <header>
         <nav class="navbar">
@@ -33,8 +34,8 @@
                     </div>
                 </div>
                 <div class="logo">
-                    <a href="index.html">
-                        <img src="DD_Art_Gallery_gold.png" alt="DD Art Gallery">
+                    <a href="../index.html">
+                        <img src="../images/logo/DD_Art_Gallery_gold.png" alt="DD Art Gallery">
                     </a>
                 </div>
                 <div class="navbar-right">
@@ -45,106 +46,111 @@
                     </div>
                 </div>
                 <ul class="nav-menu">
-                    <li><a href="index.html">O GALERII</a></li>
+                    <li><a href="../index.html">O GALERII</a></li>
                     <li><a href="wydarzenia.html">WYDARZENIA</a></li>
-                    <li><a href="artysci.html" class="active">ARTYŚCI</a></li>
+                    <li><a href="artysci.html">ARTYŚCI</a></li>
                     <li><a href="katalog.html">KATALOGI</a></li>
-                    <li><a href="kontakt.html">KONTAKT</a></li>
+                    <li><a href="kontakt.html" class="active">KONTAKT</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
+
     <!-- Page Header -->
     <section class="page-header">
         <div class="container">
-            <h1>Artyści</h1>
-            <p>Poznaj twórców reprezentowanych przez DD Art Gallery</p>
+            <h1>Kontakt</h1>
+            <p>Skontaktuj się z nami</p>
         </div>
     </section>
 
-    <!-- Artyści Content -->
-    <section class="events-section">
+    <!-- Kontakt Content -->
+    <section class="contact-section">
         <div class="container">
-            <div class="events-grid">
-                <!-- Artysta 1 -->
-                <div class="event-card">
-                    <div class="event-image">
-                        <img src="IMG_5563.jpeg" alt="Anna Kowalska" loading="eager" fetchpriority="high">
-                    </div>
-                    <div class="event-content">
-                        <h3>Anna Kowalska</h3>
-                        <p class="event-time">Malarstwo</p>
-                        <p>Artystka eksplorująca dualność ludzkiej natury poprzez kontrast form i technik. Absolwentka ASP w Warszawie.</p>
-                        <a href="artist-1.html" class="btn-small">Zobacz prace</a>
-                    </div>
+            <div class="contact-grid">
+                <!-- Formularz kontaktowy -->
+                <div class="contact-form-wrapper">
+                    <h2>Napisz do nas</h2>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Imię i nazwisko *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Adres e-mail *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Numer telefonu</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Temat</label>
+                            <select id="subject" name="subject">
+                                <option value="pytanie-ogolne">Pytanie ogólne</option>
+                                <option value="wystawa">Zapytanie o wystawę</option>
+                                <option value="zakup">Zakup dzieła</option>
+                                <option value="wspolpraca">Współpraca</option>
+                                <option value="inne">Inne</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Wiadomość *</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="consent" name="consent" required>
+                            <label for="consent">Wyrażam zgodę na przetwarzanie danych osobowych zgodnie z polityką prywatności *</label>
+                        </div>
+                        
+                        <button type="submit" class="btn">Wyślij wiadomość</button>
+                    </form>
                 </div>
 
-                <!-- Artysta 2 -->
-                <div class="event-card">
-                    <div class="event-image">
-                        <img src="zdjecia-artystka1/IMG_6925.webp" alt="Małgorzata ET BER Warlikowska" loading="eager">
+                <!-- Informacje kontaktowe -->
+                <div class="contact-info-wrapper">
+                    <div class="contact-info-box">
+                        <h3>DD Art Gallery</h3>
+                        <div class="info-item">
+                            <h4>Adres</h4>
+                            <p>ul. Przykładowa 30 / U5<br>
+                            00-000 Warszawa</p>
+                        </div>
+                        
+                        <div class="info-item">
+                            <h4>Telefon</h4>
+                            <p>+48 123 456 789</p>
+                        </div>
+                        
+                        <div class="info-item">
+                            <h4>E-mail</h4>
+                            <p>contact@ddartgallery.pl</p>
+                        </div>
+                        
+                        <div class="info-item">
+                            <h4>Godziny Otwarcia</h4>
+                            <p>Wtorek – Sobota:<br>
+                            11:00 – 19:00</p>
+                            <p>Niedziela – Poniedziałek:<br>
+                            Zamknięte</p>
+                        </div>
                     </div>
-                    <div class="event-content">
-                        <h3>Małgorzata ET BER Warlikowska</h3>
-                        <p class="event-time">Rysunek, Grafika</p>
-                        <p>Twórczyni znana z ekspresyjnych portretów i surowych, monumentalnych kompozycji rysunkowych.</p>
-                        <a href="artist-2.html" class="btn-small">Zobacz prace</a>
-                    </div>
-                </div>
 
-                <!-- Artysta 3 -->
-                <div class="event-card">
-                    <div class="event-image">
-                        <img src="IMG_5565.jpeg" alt="Piotr Zieliński" loading="eager">
-                    </div>
-                    <div class="event-content">
-                        <h3>Piotr Zieliński</h3>
-                        <p class="event-time">Rzeźba</p>
-                        <p>Rzeźbiarz pracujący z materiałami naturalnymi, tworzący organiczne formy balansujące między abstrakcją a figuracją.</p>
-                        <a href="artist-3.html" class="btn-small">Zobacz prace</a>
-                    </div>
-                </div>
-
-                <!-- Artysta 4 -->
-                <div class="event-card">
-                    <div class="event-image">
-                        <img src="IMG_5566.jpeg" alt="Katarzyna Lewandowska" loading="eager">
-                    </div>
-                    <div class="event-content">
-                        <h3>Katarzyna Lewandowska</h3>
-                        <p class="event-time">Techniki Mieszane, Kolaż</p>
-                        <p>Artystka eksperymentująca z kolażem i różnorodnymi mediami, łącząca elementy tradycyjne z nowoczesnymi.</p>
-                        <a href="artist-4.html" class="btn-small">Zobacz prace</a>
-                    </div>
-                </div>
-
-                <!-- Artysta 5 -->
-                <div class="event-card">
-                    <div class="event-image">
-                        <img src="IMG_5568.jpeg" alt="Tomasz Wiśniewski" loading="eager">
-                    </div>
-                    <div class="event-content">
-                        <h3>Tomasz Wiśniewski</h3>
-                        <p class="event-time">Malarstwo Abstrakcyjne</p>
-                        <p>Malarz abstrakcyjny znany z monumentalnych kompozycji i intensywnej kolorystyki.</p>
-                        <a href="#" class="btn-small">Zobacz prace</a>
-                    </div>
-                </div>
-
-                <!-- Artysta 6 -->
-                <div class="event-card">
-                    <div class="event-image">
-                        <img src="IMG_5582.jpeg" alt="Joanna Kamińska" loading="eager">
-                    </div>
-                    <div class="event-content">
-                        <h3>Joanna Kamińska</h3>
-                        <p class="event-time">Instalacja, Rzeźba</p>
-                        <p>Twórczyni instalacji przestrzennych eksplorujących relację między człowiekiem a otoczeniem.</p>
-                        <a href="#" class="btn-small">Zobacz prace</a>
+                    <div class="map-placeholder">
+                        <div class="map-content">
+                            <p>Mapa lokalizacji</p>
+                            <p class="map-note">centrum Warszawy</p>
+                        </div>
                     </div>
                 </div>
             </div>
+
         </div>
     </section>
 
@@ -153,7 +159,7 @@
         <div class="container">
             <div class="footer-main">
                 <div class="footer-logo">
-                    <img src="DD_Art_Gallery_gold.png" alt="DD Art Gallery">
+                    <img src="../images/logo/DD_Art_Gallery_gold.png" alt="DD Art Gallery">
                 </div>
                 
                 <div class="footer-content">
@@ -224,7 +230,9 @@
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="../js/script.js">
+
+    <script src="../js/script.js"></script>
 </body>
 </html>
 
