@@ -890,8 +890,22 @@ header {
 
 .about-preview h2 {
     font-size: 2rem;
-    margin-bottom: 50px;
-    font-weight: 300;
+    font-weight: 100;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.about-preview h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background: var(--gold-gradient);
 }
 
 .about-preview p {
@@ -912,23 +926,22 @@ header {
 
 
 .featured-artists h2 {
-    position: relative;
-    font-size: 2.8rem;
-    margin-bottom: 100px;
+    font-size: 2rem;
     font-weight: 100;
-    padding-left: 120px;
     text-transform: uppercase;
+    margin-bottom: 40px;
+    position: relative;
+    padding-bottom: 20px;
 }
 
-.featured-artists h2::before {
+.featured-artists h2::after {
     content: '';
     position: absolute;
+    bottom: 0;
     left: 0;
-    top: 50%;
-    width: 80px;
+    width: 60px;
     height: 2px;
-    background: linear-gradient(to right, var(--gold), transparent);
-    opacity: 0.6;
+    background: var(--gold-gradient);
 }
 
 .featured-grid {
@@ -1110,7 +1123,7 @@ header {
 
 /* Current Exhibition Section - ASYMMETRIC LAYOUT */
 .current-exhibition {
-    padding: 160px 0 180px;
+    padding: 80px 0 180px;
     background-color: #e8e6e1;
     position: relative;
     overflow: hidden;
@@ -1139,16 +1152,22 @@ header {
 }
 
 .current-exhibition h2 {
-    position: absolute;
-    left: 80px;
-    top: 80px;
-    font-size: 4rem;
+    font-size: 2rem;
     font-weight: 100;
-    color: rgba(33, 33, 33, 0.03);
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-    z-index: 0;
     text-transform: uppercase;
+    margin-bottom: 40px;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.current-exhibition h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background: var(--gold-gradient);
 }
 
 .exhibition-grid {
@@ -1193,8 +1212,6 @@ header {
     overflow: hidden;
     height: 100%;
     background-color: #e8e6e1;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    transition: clip-path 0.7s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .exhibition-item:nth-child(1) .exhibition-image {
@@ -1204,10 +1221,6 @@ header {
 
 .exhibition-item:nth-child(4) .exhibition-image {
     height: 100%;
-}
-
-.exhibition-item:hover .exhibition-image {
-    clip-path: polygon(0 2%, 100% 0, 100% 98%, 0 100%);
 }
 
 .exhibition-image::before {
@@ -1226,7 +1239,6 @@ header {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1), filter 0.7s ease;
     filter: grayscale(0.2);
 }
 
@@ -1814,23 +1826,22 @@ footer::after {
 }
 
 .fairs-section h2 {
-    text-align: center;
-    margin-bottom: 70px;
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 100;
     text-transform: uppercase;
+    margin-bottom: 40px;
     position: relative;
+    padding-bottom: 20px;
 }
 
 .fairs-section h2::after {
     content: '';
     position: absolute;
-    bottom: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 1px;
-    background: linear-gradient(to right, transparent, #212121, transparent);
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background: var(--gold-gradient);
 }
 
 .fair-info {
@@ -2280,12 +2291,12 @@ footer::after {
 
 .about-text h2 {
     grid-column: span 2;
-    text-align: left;
-    font-size: 2.4rem;
+    font-size: 2rem;
     font-weight: 100;
-    margin-bottom: 60px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
     position: relative;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
 }
 
 .about-text h2::after {
@@ -2293,9 +2304,9 @@ footer::after {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100px;
-    height: 1px;
-    background: linear-gradient(to right, #212121, transparent);
+    width: 60px;
+    height: 2px;
+    background: var(--gold-gradient);
 }
 
 .about-text .lead {
@@ -2436,20 +2447,20 @@ footer::after {
 .gallery-space h2 {
     font-size: 2rem;
     font-weight: 100;
-    margin-bottom: 50px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
     position: relative;
-    padding-left: 100px;
+    padding-bottom: 20px;
 }
 
-.gallery-space h2::before {
+.gallery-space h2::after {
     content: '';
     position: absolute;
+    bottom: 0;
     left: 0;
-    top: 50%;
-    width: 70px;
+    width: 60px;
     height: 2px;
-    background: linear-gradient(to right, var(--gold), transparent);
-    opacity: 0.6;
+    background: var(--gold-gradient);
 }
 
 .gallery-space p {
@@ -2515,7 +2526,22 @@ footer::after {
 }
 
 .team-section h2 {
-    margin-bottom: 30px;
+    font-size: 2rem;
+    font-weight: 100;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.team-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background: var(--gold-gradient);
 }
 
 .team-section p {
@@ -2861,9 +2887,22 @@ footer::after {
 }
 
 .contact-form-wrapper h2 {
-    margin-bottom: 40px;
     font-size: 2rem;
-    font-weight: 300;
+    font-weight: 100;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.contact-form-wrapper h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background: var(--gold-gradient);
 }
 
 .form-group {
@@ -3084,10 +3123,22 @@ footer::after {
 }
 
 .additional-info h2 {
-    text-align: center;
-    margin-bottom: 60px;
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 100;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.additional-info h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background: var(--gold-gradient);
 }
 
 .transport-info {
@@ -3531,13 +3582,8 @@ img.error {
     }
 
     .current-exhibition h2 {
-        position: static;
-        font-size: 2rem;
-        writing-mode: horizontal-tb;
-        text-align: center;
-        margin-bottom: 60px;
-        color: #212121;
-        opacity: 0.1;
+        font-size: 1.4rem;
+        margin-bottom: 30px;
     }
 
     .catalog-grid {
@@ -3619,13 +3665,13 @@ img.error {
 
     .featured-artists h2 {
         font-size: 1.4rem;
-        padding-left: 0;
         text-align: center;
         margin-bottom: 40px;
     }
 
-    .featured-artists h2::before {
-        display: none;
+    .featured-artists h2::after {
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .featured-artists::before {
@@ -3968,9 +4014,22 @@ img.error {
 }
 
 .artist-works-section h2 {
-    text-align: center;
-    margin-bottom: 60px;
     font-size: 2rem;
+    font-weight: 100;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.artist-works-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background: var(--gold-gradient);
 }
 
 .artist-works-grid {
