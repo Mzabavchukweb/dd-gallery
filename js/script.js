@@ -331,7 +331,7 @@ window.addEventListener('scroll', function () {
     });
 
     // Vertical text parallax
-    const verticalTexts = document.querySelectorAll('.current-exhibition h2, .artists-section::before, .featured-artists::before');
+    const verticalTexts = document.querySelectorAll('.artists-section::before, .featured-artists::before');
     verticalTexts.forEach(text => {
         if (text) {
             const rect = text.getBoundingClientRect();
